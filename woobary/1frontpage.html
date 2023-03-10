@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <title>Front page</title>
+    <style>
+        .card:hover {
+            transform: scale(1.2);
+            transition: transform 0.5s ease;
+            box-shadow: 2px 2px 2px;
+            z-index: 1;
+        }
+
+        .sidebar>ul>li:hover {
+            transform: scale(1.2);
+            transition: transform 0.5s ease;
+            color: white;
+            background-color: black;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="d-flex  mt-2 py-3  " style="border-bottom: 2px solid rgb(223, 220, 220) ;">
+        <div class="container align-items-center" style="margin-left: 1%;">
+            <a class="navbar-brand" href="#">
+                <img src="./icon_工作區域 1_工作區域 1.png" style="width: 200px;" alt="">
+            </a>
+        </div>
+        <div class="member d-flex align-items-end">
+            <ul class="nav nav-pills d-flex " style="flex-wrap:nowrap ;">
+                <li class="nav-item dropdown  d-flex ">
+                    <a class=" " aria-current="page" href="#"><img src="./selfie_工作區域 1_工作區域 1.png "
+                            style="width: 50px;" class=" selfie nav-link p-0 me-2 "></a>
+                    <a class=" dropdown-toggle me-5 pt-2 fs-5 text-decoration-none " style="color: black;"
+                        data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">榕家</a>
+                    <ul class="dropdown-menu ">
+                        <li><a class="dropdown-item" href="#">會員中心</a></li>
+                        <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">外部連結</a></li>
+            </ul>
+            <li>
+                <form class="d-flex nav-item me-5 mt-2 ">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        style="min-width: 12rem;">
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+
+            </li>
+            </ul>
+
+
+        </div>
+    </header>
+    <div class="banner1 row ">
+        <div class="sidebar col-2 d-flex flex-column align-items-center fw-bold ">
+            <h4 class="my-3 fw-bold ">借閱狀態</h4>
+            <ul class="list-unstyled">
+                <li class="fs-5 p-2">🟤 排隊中</li>
+                <li class="fs-5 p-2">🔵 閱讀中</li>
+                <li class="fs-5 p-2">🟡 待歸還</li>
+            </ul>
+            <h4 class="my-2 fw-bold ">閱讀心得</h4>
+            <ul class="list-unstyled">
+                <li class="fs-5 p-2">🔴 還未寫</li>
+                <li class="fs-5 p-2">🟢 已完成</li>
+            </ul>
+        </div>
+        <div class="mainview col-10 row justify-content-center ">
+            <div class="card col-3 my-2 mx-2" id="123"> <a href="http://127.0.0.1:5500/2bookpage.html"><img
+                        src="https://im2.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/092/21/0010922143.jpg&v=6256a678k&w=280&h=280"
+                        class="card-img-top " alt="..."></a>
+                <div class="card-body">
+                    <p class="fs-5 fw-bold " onclick="change_name1()">書籍名稱:</p>
+                    <p class="card-title text-decoration-none fs-4 fw-bold text-primary " onclick="change_name1()"
+                        id="book_name1">卡片盒筆記
+                    </p><br>
+                    <p class="fs-5 fw-bold" onclick="author_name1()">作者名稱:</p>
+                    <p class="card-text text-decoration-none fs-5 text-primary" id="author_name1"
+                        onclick="author_name1()">Sonke Ahrens
+                    </p><br>
+                    <select class="" style="position: absolute;bottom: 5%; right: 20%;">
+                        <option value="排隊中" class="  text-decoration-none mt-4">
+                            🟤 排隊中</option>
+                        <option value="閱讀中" class="  text-decoration-none mt-4">
+                            🔵 閱讀中</option>
+                        <option value="待歸還" class="  text-decoration-none mt-4">
+                            🟡 待歸還</option>
+                        <option value="還未寫" class="  text-decoration-none mt-4">
+                            🔴 還未寫</option>
+                        <option value="已完成" class="  text-decoration-none mt-4">
+                            🟢 已完成</option>
+                    </select>
+                </div>
+            </div>
+            <div class="card col-3 my-2 mx-2" id="123"> <img
+                    src="https://im2.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/088/84/0010888435.jpg&v=60815e45k&w=280&h=280"
+                    class="card-img-top " alt="...">
+                <div class="card-body">
+                    <p class="fs-5 fw-bold " onclick="change_name2()">書籍名稱:</p>
+                    <p class="card-title text-decoration-none fs-4 fw-bold text-primary " onclick="change_name2()"
+                        id="book_name1">灰階思考
+                    </p><br>
+                    <p class="fs-5 fw-bold" onclick="author_name2()">作者名稱:</p>
+                    <p class="card-text text-decoration-none fs-5 text-primary" id="author_name1"
+                        onclick="author_name2()">謝孟恭
+                    </p><br>
+                    <select class="" style="position: absolute;bottom: 5%; right: 20%;">
+                        <option value="排隊中" class="  text-decoration-none mt-4">
+                            🟤 排隊中</option>
+                        <option value="閱讀中" class="  text-decoration-none mt-4">
+                            🔵 閱讀中</option>
+                        <option value="待歸還" class="  text-decoration-none mt-4">
+                            🟡 待歸還</option>
+                        <option value="還未寫" class="  text-decoration-none mt-4">
+                            🔴 還未寫</option>
+                        <option value="已完成" class="  text-decoration-none mt-4">
+                            🟢 已完成</option>
+                    </select>
+                </div>
+            </div>
+            <div class="card col-3 my-2 mx-2" id="123"> <img
+                    src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/094/91/0010949100.jpg&v=63da3f44k&w=280&h=280"
+                    class="card-img-top " alt="...">
+                <div class="card-body">
+                    <p class="fs-5 fw-bold " onclick="change_name3()">書籍名稱:</p>
+                    <p class="card-title text-decoration-none fs-4 fw-bold text-primary " onclick="change_name3()"
+                        id="book_name1">心流
+                    </p><br>
+                    <p class="fs-5 fw-bold" onclick="author_name3()">作者名稱:</p>
+                    <p class="card-text text-decoration-none fs-5 text-primary" id="author_name1"
+                        onclick="author_name3()">Marilyn Atkinson
+                    </p><br>
+                    <select class="" style="position: absolute;bottom: 5%; right: 20%;">
+                        <option value="排隊中" class="  text-decoration-none mt-4">
+                            🟤 排隊中</option>
+                        <option value="閱讀中" class="  text-decoration-none mt-4">
+                            🔵 閱讀中</option>
+                        <option value="待歸還" class="  text-decoration-none mt-4">
+                            🟡 待歸還</option>
+                        <option value="還未寫" class="  text-decoration-none mt-4">
+                            🔴 還未寫</option>
+                        <option value="已完成" class="  text-decoration-none mt-4">
+                            🟢 已完成</option>
+                    </select>
+                </div>
+            </div>
+            <div class="card col-3 my-2 mx-2" id="123"> <img
+                    src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/080/85/0010808582.jpg&v=5c1242bdk&w=348&h=348"
+                    class="card-img-top " alt="...">
+                <div class="card-body">
+                    <p class="fs-5 fw-bold " onclick="change_name4()">書籍名稱:</p>
+                    <p class="card-title text-decoration-none fs-4 fw-bold text-primary " onclick="change_name4()"
+                        id="book_name1">半減卻
+                    </p><br>
+                    <p class="fs-5 fw-bold" onclick="author_name4()">作者名稱:</p>
+                    <p class="card-text text-decoration-none fs-5 text-primary" id="author_name1"
+                        onclick="author_name4()">王偉忠
+                    </p><br>
+                    <select class="" style="position: absolute;bottom: 5%; right: 20%;">
+                        <option value="排隊中" class="  text-decoration-none mt-4">
+                            🟤 排隊中</option>
+                        <option value="閱讀中" class="  text-decoration-none mt-4">
+                            🔵 閱讀中</option>
+                        <option value="待歸還" class="  text-decoration-none mt-4">
+                            🟡 待歸還</option>
+                        <option value="還未寫" class="  text-decoration-none mt-4">
+                            🔴 還未寫</option>
+                        <option value="已完成" class="  text-decoration-none mt-4">
+                            🟢 已完成</option>
+                    </select>
+                </div>
+            </div>
+            <div class="card col-3 my-2 mx-2" id="123"><a href=""><img
+                        src="https://im2.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/092/00/0010920089_bc_01.jpg&v=62331bebk&w=280&h=280"
+                        class="card-img-top " alt="..."></a>
+                <div class="card-body">
+                    <p class="fs-5 fw-bold " onclick="change_name5()">書籍名稱:</p>
+                    <p class="card-title text-decoration-none fs-4 fw-bold text-primary " onclick="change_name5()"
+                        id="book_name1">小狐狸深夜故事集
+                    </p><br>
+                    <p class="fs-5 fw-bold" onclick="author_name5()">作者名稱:</p>
+                    <p class="card-text text-decoration-none fs-5 text-primary" id="author_name1"
+                        onclick="author_name5()">克里斯汀．麥凱．赫迪克
+                    </p><br>
+                    <select class="" style="position: absolute;bottom: 5%; right: 20%;">
+                        <option value="排隊中" class="  text-decoration-none mt-4">
+                            🟤 排隊中</option>
+                        <option value="閱讀中" class="  text-decoration-none mt-4">
+                            🔵 閱讀中</option>
+                        <option value="待歸還" class="  text-decoration-none mt-4">
+                            🟡 待歸還</option>
+                        <option value="還未寫" class="  text-decoration-none mt-4">
+                            🔴 還未寫</option>
+                        <option value="已完成" class="  text-decoration-none mt-4">
+                            🟢 已完成</option>
+                    </select>
+                </div>
+            </div>
+            <div class="card col-3 my-2 mx-2" id="123" style="position: relative;"> <a href=""><img
+                        src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/075/27/0010752714.jpg&v=59143d4bk&w=280&h=280"
+                        class="card-img-top " alt="..."></a>
+                <div class="card-body">
+                    <p class="fs-5 fw-bold " onclick="change_name6()">書籍名稱:</p>
+                    <p class="card-title text-decoration-none fs-4 fw-bold text-primary " onclick="change_name6()"
+                        id="book_name1">刻意練習
+                    </p><br>
+                    <p class="fs-5 fw-bold" onclick="author_name6()">作者名稱:</p>
+                    <p class="card-text text-decoration-none fs-5 text-primary" id="author_name1"
+                        onclick="author_name6()"> Anders Ericsson, Robert Pool
+                    </p><br>
+                    <select class="" style="position: absolute;bottom: 5%; right: 20%;">
+                        <option value="排隊中" class="  text-decoration-none mt-4">
+                            🟤 排隊中</option>
+                        <option value="閱讀中" class="  text-decoration-none mt-4">
+                            🔵 閱讀中</option>
+                        <option value="待歸還" class="  text-decoration-none mt-4">
+                            🟡 待歸還</option>
+                        <option value="還未寫" class="  text-decoration-none mt-4">
+                            🔴 還未寫</option>
+                        <option value="已完成" class="  text-decoration-none mt-4">
+                            🟢 已完成</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="d-flex justify-content-center align-items-center" style="border-top: 2px solid rgb(223, 220, 220);">
+        <p class="p-3 fw-bold">@Copyright by Tom.Riddle.SR</p>
+    </footer>
+    <script>
+        function change_name1() {
+            var a = prompt("請輸入書本名稱");
+            var b = document.getElementById("book_name1")
+            b.innerText = a
+        }
+        function author_name1() {
+            var c = prompt("請輸入作者名稱");
+            var d = document.getElementById("author_name1")
+            d.innerText = c
+        }
+        function change_name2() {
+            var a = prompt("請輸入書本名稱");
+            var b = document.getElementById("book_name2")
+            b.innerText = a
+        }
+        function author_name2() {
+            var c = prompt("請輸入作者名稱");
+            var d = document.getElementById("author_name2")
+            var e = document.createTextNode(c)
+            d.appendChild(e)
+        }
+        function change_name3() {
+            var a = prompt("請輸入書本名稱");
+            var b = document.getElementById("book_name3")
+            b.innerText = a
+        }
+        function author_name3() {
+            var c = prompt("請輸入作者名稱");
+            var d = document.getElementById("author_name3")
+            var e = document.createTextNode(c)
+            d.appendChild(e)
+        }
+        function change_name4() {
+            var a = prompt("請輸入書本名稱");
+            var b = document.getElementById("book_name4")
+            b.innerText = a
+        }
+        function author_name4() {
+            var c = prompt("請輸入作者名稱");
+            var d = document.getElementById("author_name4")
+            var e = document.createTextNode(c)
+            d.appendChild(e)
+        }
+        function change_name5() {
+            var a = prompt("請輸入書本名稱");
+            var b = document.getElementById("book_name5")
+            b.innerText = a
+        }
+        function author_name5() {
+            var c = prompt("請輸入作者名稱");
+            var d = document.getElementById("author_name5")
+            var e = document.createTextNode(c)
+            d.appendChild(e)
+        }
+        function change_name6() {
+            var a = prompt("請輸入書本名稱");
+            var b = document.getElementById("book_name6")
+            b.innerText = a
+        }
+        function author_name6() {
+            var c = prompt("請輸入作者名稱");
+            var d = document.getElementById("author_name6")
+            var e = document.createTextNode(c)
+            d.appendChild(e)
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

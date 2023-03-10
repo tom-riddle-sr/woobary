@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <title>Front page</title>
+    <style>
+        #dotform>div:hover {
+            background-color: black;
+            transform: scale(1.2);
+            transition: transform 0.5s ease;
+            z-index: 1;
+        }
+
+        .store_icon>img:hover {
+            transform: scale(1.2);
+            transition: transform 0.5s ease;
+            z-index: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="d-flex mt-2" style="border-bottom: 2px solid rgb(223, 220, 220) ;">
+        <div class="container align-items-center" style="margin-left: 1%;">
+            <a class="navbar-brand" href="#">
+                <img src="./icon_工作區域 1_工作區域 1.png" style="width: 200px;" alt="">
+            </a>
+        </div>
+        <div class="member d-flex align-items-end">
+            <ul class="nav nav-pills d-flex " style="flex-wrap:nowrap ;">
+                <li class="nav-item dropdown  d-flex ">
+                    <a class=" " aria-current="page" href="#"><img src="./selfie_工作區域 1_工作區域 1.png "
+                            style="width: 50px;" class=" selfie nav-link p-0 me-2 "></a>
+                    <a class=" dropdown-toggle me-5 pt-2 fs-5 text-decoration-none " style="color: black;"
+                        data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">榕家</a>
+                    <ul class="dropdown-menu ">
+                        <li><a class="dropdown-item" href="#">會員中心</a></li>
+                        <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">外部連結</a></li>
+            </ul>
+            <li>
+                <form class="d-flex nav-item me-5 mt-2 ">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        style="min-width: 12rem;">
+                    <button  class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+
+            </li>
+            </ul>
+
+
+        </div>
+    </header>
+    <div class="banner1 row m-3">
+        <div class="col-5">
+            <img src="https://im2.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/092/21/0010922143.jpg&v=6256a678k&w=280&h=280"
+                alt="" class="w-100 rounded  " style=" border:2px solid rgb(223, 220, 220) ">
+        </div>
+        <div class="col-7 px-2 rounded " style="position: relative; border:  2px solid rgb(223, 220, 220)">
+            <div class="d-flex">
+                <p class="fw-bold fs-2 pt-3 me-2  " onclick="change_name1()">名稱:</p>
+                <p class=" fs-2 pt-3 " id="book_name1" onclick="change_name1()">卡片盒筆記法</p>
+            </div>
+            <div class="d-flex">
+                <p class="fs-3 fw-bold me-2" onclick="author_name1()">作者:</p>
+                <p class="fs-3 " id="author_name1" onclick="author_name1()">Sonke Ahrens</p>
+            </div>
+            <label for="date " class="fs-5 fw-bold">日期:</label><input type="date" id="date" class="ms-2">
+            <div class="d-flex align-items-end  me-2 mb-3 " style="position: absolute; right: 5%; bottom: 0%;">
+                <a class="store_icon"
+                    href="https://www.books.com.tw/?gclid=Cj0KCQiArsefBhCbARIsAP98hXTIQQBgIPCp3rhi5a3coTxrlS_Tsenj3dEiYKOyuNyfyGQLsowQPi4aArjNEALw_wcB"><img
+                        src="https://jci.book.com.tw/img/logo/books_logo_04.svg" alt="" class=" mb-2"
+                        style="width:3rem"></a>
+                <a class="store_icon" href="https://ipac.library.taichung.gov.tw/webpac/search.cfm"><img
+                        src="https://play-lh.googleusercontent.com/gXmQSqfNbtsVdUdRqMsIwFtIr-TNk4j71OWjxnwLLHBznx8SQa-UUAQ1OoYI-rs7vA=w240-h480-rw"
+                        alt="" class="ms-2 mb-2" style="width:3rem"></a>
+                <p class="fs-3 fw-bold ms-4 ">🟤 排隊中</p>
+            </div>
+        </div>
+    </div>
+    <div class="banner2 row justify-content-center mx-4">
+        <h2 class=" fw-bold">閱讀心得:</h2>
+        <textarea placeholder="請輸入文字" id="input1" type="text" class="text-primary col-12 mb-1  rounded"
+            style=" height: 500px; border: 2px solid rgb(223, 220, 220) ;"></textarea>
+        <textarea value="#心得 #閱讀" id="input2" type="text" class=" mb-1 rounded text-primary"
+            style=" border: 2px solid rgb(223, 220, 220) ;">#心得 #閱讀</textarea>
+        <div id="dotform" class=" d-flex justify-content-center ">
+            <div id="dot1" class="dot1 border p-2 ms-2">❤️</div>
+            <div id="dot2" class="dot2 border p-2 ms-2">🐓</div>
+            <div id="dot3" class="dot3 border p-2 ms-2">🌞</div>
+            <div id="dot4" class="dot4 border p-2 ms-2">🚀</div>
+            <div id="dot5" class="dot5 border p-2 ms-2">🧡</div>
+            <div id="dot6" class="dot6 border p-2 ms-2">💛</div>
+            <div id="dot7" class="dot7 border p-2 ms-2">💚</div>
+            <div id="dot8" class="dot8 border p-2 ms-2">💙</div>
+            <div id="dot9" class="dot9 border p-2 ms-2">💜</div>
+        </div>
+        <p id="p1" class="text-primary"></p>
+        <div class="col mb-1">
+            <button id="botton1" onclick="input1()" class="bg-black text-white rounded float-end ms-2">儲存</button>
+            <button id="botton2" onclick="change1()" class="bg-black text-white rounded float-end">更改</button>
+        </div>
+    </div>
+    <footer class="d-flex justify-content-center align-items-center" style="border-top: 2px solid rgb(223, 220, 220);">
+        <p class="p-3 fw-bold">@Copyright by Tom.Riddle.SR</p>
+    </footer>
+</body>
+<script>
+    function change_name1() {
+        var a = prompt("請輸入書本名稱");
+        var b = document.getElementById("book_name1")
+        b.innerText = a
+    }
+    function author_name1() {
+        var c = prompt("請輸入作者名稱");
+        var d = document.getElementById("author_name1")
+        var e = document.createTextNode(c)
+        d.appendChild(e)
+    }
+    var j = document.getElementById("input1")
+    var k = document.getElementById("input2")
+    var i = document.getElementById("p1")
+    var n = document.getElementById("dotform")
+    console.log(n)
+
+    function input1() {
+        var f = document.getElementById("input1").value
+        var g = document.getElementById("input2").value
+        var h = `${f}<br>${g}`
+        i.innerHTML = h
+        j.style.display = "none"
+        k.style.display = "none"
+        qq.style.display = "none"
+    }
+    function change1() {
+        j.style.display = "flex"
+        k.style.display = "flex"
+        n.style.display = "flex"
+        i.innerHTML = ""
+    }
+    var l = document.getElementById('input1');
+    var m = document.getElementById('dot1');
+
+    m.addEventListener('click', function () {
+        // 获取<textarea>的光标位置
+        var start = l.selectionStart;
+        var end = l.selectionEnd;
+
+        // 获取<textarea>的值
+        var value = l.value;
+
+        // 将点号添加到光标位置的后面
+        l.value = value.substring(0, start) + '❤️' + value.substring(end);
+
+        // 将光标位置设置为新点号的位置
+        l.selectionStart = l.selectionEnd = start + 1;
+
+        // 让<textarea>获取焦点
+        l.focus();
+    });
+
+
+  
+
+
+</script>
+
+</html>
