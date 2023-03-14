@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <h2 class="bg-secondary border-bottom border-dark border-3">
+        delete
+    </h2>
+    <div class="d-flex justify-content-between align-items-center border-bottom border-dark border-3 pb-1">
+        <div id="name"></div>
+        <div class="me-5 ">
+            <button id="yes" class="rounded">yes</a></button>
+            <button class="rounded">no</button>
+        </div>
+    </div>
+    <script>
+        var a = sessionStorage.getItem("id")
+        console.log(a)
+        var url = "/index/item/" + a
+        console.log(url)
+        $.get(url, function (e) {
+            var item = e
+            $("#title").text(item.title)
+        })
+
+        $("#yes").on("click", async function () {
+            var id = sessionStorage.getItem("id")
+            var delurl = "/index/del/" + id
+            var result = await $.ajax({
+                type: "delete",
+                url: delurl
+            })
+            window.location = "/index.html"
+        })
+
+    </script>
+</body>
+
+</html>

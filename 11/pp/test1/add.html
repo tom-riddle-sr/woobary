@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head> 
+
+<body>
+    <h2 class="bg-secondary border-bottom border-dark border-3">
+        add
+    </h2>
+    <div class="d-flex justify-content-between align-items-center border-bottom border-dark border-3 pb-1">
+        <input id="input1" value="" type="text" class="ms-5 border-dark border-2 rounded ">
+        <div class="me-5 ">
+            <button class="rounded">yes</button>
+            <button class="rounded">no</button>
+        </div>
+    </div>
+<script>
+    $("#input1").on("click",async function(){
+        var a = {
+           title:$("input1").prop("value")
+        }
+
+        var result= await $.ajax({
+            type:"post",
+            url:"/index/add",
+            contentType:"application/json",
+            data:JSON.stringify(a)
+        })
+        window.location="/Index.html"
+    })
+</script>
+
+
+
+</body>
+
+
+
+
+</html>
